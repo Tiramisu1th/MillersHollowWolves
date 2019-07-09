@@ -1,0 +1,27 @@
+{
+  "name": "millers-hollow-wolves",
+  "version": "1.0.0",
+  "description": "A self made minigame bot containing The Werewolves of the Miller's Hollow",
+  "main": "index.js",
+  "dependencies": {
+    "bufferutil": "^4.0.1",
+    "discord.js": "^11.5.1",
+    "discord.js-commando": "^0.10.0",
+    "libsodium-wrappers": "^0.7.4",
+    "sqlite": "^3.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ztumpie905509/MillersHollowWolves.git"
+  },
+  "author": "Ztumpie <stumpie905509@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ztumpie905509/MillersHollowWolves/issues"
+  },
+  "homepage": "https://github.com/Ztumpie905509/MillersHollowWolves#readme"
+}
