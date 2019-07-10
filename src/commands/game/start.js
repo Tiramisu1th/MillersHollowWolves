@@ -15,7 +15,7 @@ class start extends Command {
         const { assignRole } = require("../../core/exports")
         if(participantsList.length < 2) return message.channel.send("You don't have enough players to play.")
         assignRole(participantsList, message)
-        participantsList = []
+        participantsList.length = 0
     }
 }
 

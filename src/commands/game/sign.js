@@ -11,7 +11,7 @@ class signUp extends Command {
     }
 
     run(message) {
-        const { participantsList } = require("../../../index")
+        var { participantsList } = require("../../../index")
         var newParticipant = message.author.username
         if (participantsList.includes(newParticipant)) return message.reply("You have already signed up !")
         participantsList.push(newParticipant)
