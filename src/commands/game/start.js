@@ -13,7 +13,7 @@ class start extends Command {
     run(message) {
         var { participantsList } = require("../../../index")
         const { assignRole } = require("../../core/exports")
-        if(participantsList.length < 2) return message.channel.send("You don't have enough players to play.")
+        if(participantsList.length < 6) return message.channel.send("You don't have enough players to play.")
         assignRole(participantsList, message)
         participantsList.length = 0
     }
