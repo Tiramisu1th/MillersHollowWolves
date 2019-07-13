@@ -12,7 +12,7 @@ client.registry
 
 client.on("ready", () => {
     console.log("This thing is up and ready !")
-    client.user.setActivity("me online", { type: 'WATCHING' })
+    client.user.setActivity("Cookiezo getting 2k pp play if logged in", { type: 'WATCHING' })
 })
 
 client.on('error', console.error)
