@@ -1,6 +1,7 @@
 const path = require("path")
 const { Token , client } = require("./src/core/exports")
 var participantsList = []
+var participantsNameList = []
 
 client.registry
     .registerDefaultTypes()
@@ -18,4 +19,4 @@ client.on('error', console.error)
 
 client.login(Token)
 
-module.exports = { participantsList }
+module.exports = { participantsList, participantsNameList }
