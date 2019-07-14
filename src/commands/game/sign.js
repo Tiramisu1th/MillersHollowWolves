@@ -15,11 +15,8 @@ class signUp extends Command {
         var newParticipant = message.author
         if (participantsList.includes(newParticipant)) return message.reply("You have already signed up !")
         participantsList.push(newParticipant)
-        for (let i = 0; i < participantsList.length; i++) {
-            const element = participantsList[i].username;
-            participantsNameList.push(element)
-        }
-        console.log(participantsList)
+        var name = newParticipant.username;
+        participantsNameList.push(name)
         message.channel.send("You are now in the list of the participants for the next game of The Werewolves of the Miller's Hollow.\n\nCurrent player(s) :\n" + participantsNameList.join("\n"))
     }
 }
