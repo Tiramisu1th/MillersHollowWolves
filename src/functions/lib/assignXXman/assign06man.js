@@ -11,7 +11,7 @@ function assign06man(userList) {
         combination_A: function(userList) {
             var { gameInfo } = require("../../../../index")
             gameInfo.combination = "A"
-            gameInfo.playerNumber = 6
+            gameInfo.playerNumber = "6"
             var pushing = []
             for (let i = 0; i < 2; i++) {
                 var affectedPlayer = userList.shift()
@@ -40,7 +40,7 @@ function assign06man(userList) {
         combination_B: function(userList) {
             var { gameInfo } = require("../../../../index")
             gameInfo.combination = "B"
-            gameInfo.playerNumber = 6
+            gameInfo.playerNumber = "6"
             var pushing = []
             for (let i = 0; i < 2; i++) {
                 var affectedPlayer = userList.shift()
@@ -69,7 +69,7 @@ function assign06man(userList) {
         combination_C: function(userList) {
             var { gameInfo } = require("../../../../index")
             gameInfo.combination = "C"
-            gameInfo.playerNumber = 6
+            gameInfo.playerNumber = "6"
             var pushing = []
             for (let i = 0; i < 1; i++) {
                 var affectedPlayer = userList.shift()
@@ -110,7 +110,7 @@ function assign06man(userList) {
         combination_D: function(userList) {
             var { gameInfo } = require("../../../../index")
             gameInfo.combination = "D"
-            gameInfo.playerNumber = '6'
+            gameInfo.playerNumber = "6"
             var pushing = []
             for (let i = 0; i < 1; i++) {
                 var affectedPlayer = userList.shift()
@@ -151,7 +151,7 @@ function assign06man(userList) {
         combination_Troll: function(userList) {
             var { gameInfo } = require("../../../../index")
             gameInfo.combination = "Troll"
-            gameInfo.playerNumber = '6'
+            gameInfo.playerNumber = "6"
             var pushing = []
             for (let i = 0; i < 6; i++) {
                 var affectedPlayer = userList.shift()
