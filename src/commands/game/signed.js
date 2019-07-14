@@ -11,9 +11,9 @@ class signUp extends Command {
     }
 
     run(message) {
-        var { participantsList } = require("../../../index")
-        if (participantsList.length === 0) return message.channel.send("No one has signed up so far.")
-        message.channel.send("Participants for the next game of The Werewolves of the Miller's Hollow :\n" + participantsList.join("\n"))
+        var { participantsNameList } = require("../../../index")
+        if (participantsNameList.length === 0) return message.channel.send("No one has signed up so far.")
+        message.channel.send("Participants for the next game of The Werewolves of the Miller's Hollow :\n" + participantsNameList.join("\n"))
     }
 }
 
