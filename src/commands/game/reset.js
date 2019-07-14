@@ -11,9 +11,24 @@ class reset extends Command {
     }
 
     run(message) {
-        var { participantsList , participantsNameList } = require("../../../index")
+        var { participantsList , participantsNameList , gameInfo } = require("../../../index")
         participantsList.length = 0
         participantsNameList.length = 0
+        gameInfo.playerNumber = []
+        gameInfo.combination = []
+        gameInfo.playerRoles = {
+            Villager: [],
+            Werewolves: [],
+            WhiteWolf: [],
+            BlackWolf: [],
+            Hunter: [],
+            FortuneTeller: [],
+            Guard: [],
+            Witch: [],
+            NightWitch: [],
+            Knight: [],
+            Idiot: []
+        }
         message.channel.send("The player list has been resetted.")
     }
 }
