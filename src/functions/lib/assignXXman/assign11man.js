@@ -45,7 +45,7 @@ function assign11man(userList) {
         },
         combination_B: function(userList) {
             var { gameInfo } = require("../../../../index")
-            gameInfo.combination = "A"
+            gameInfo.combination = "B"
             gameInfo.playerNumber = "11"
             var pushing = []
             for (let i = 0; i < 4; i++) {
