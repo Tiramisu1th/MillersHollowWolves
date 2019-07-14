@@ -19,7 +19,6 @@ var gameInfo = {
         Idiot: []
     }
 }
-
 client.registry
     .registerDefaultTypes()
     .registerGroups([["game", "game"]])
