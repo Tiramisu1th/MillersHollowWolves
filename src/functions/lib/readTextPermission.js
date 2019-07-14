@@ -1,6 +1,6 @@
 function readTextPermission(msg, userGroup /* Such as wolves, villagers, etc. */, allowReadChannel = true) {
-    var channel = msg.channel.guild.channels.find((x) => x.id === "599846751566037002")
     var { client } = require("../../../index")
+    var channel = client.channels.get("599846751566037002")
     if (allowReadChannel === true) {    
         for (let index = 0; index < userGroup.length; index++) {
             const element = userGroup[index];

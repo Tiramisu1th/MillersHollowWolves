@@ -44,8 +44,8 @@ function informRoles(client) {
         player.send("You are a __Guard__, when it is you turn at night, please go to <#599846751566037002> and type `//protect [player name]` to protect a player from Werewolves.\n_**WARNING : THE PLAYER WILL STILL DIE IF YOU AND THE WITCH CHOSE TO SAVE THE SAME PLAYER.**_")
     }
 
-    for (let i = 0; i < entry.Guard.length; i++) {
-        const element = entry.Guard[i];
+    for (let i = 0; i < entry.Witch.length; i++) {
+        const element = entry.Witch[i];
         var player = client.users.find(user => user.username === element)
         player.send("You are a __Witch__, when it is you turn at night, please go to <#599846751566037002> and type `//heal [player name]` to heal a player (Including yourself) from Werewolves, or use `//kill [player name]` to kill a player.\nWARNING : THE PLAYER WILL STILL DIE IF YOU AND THE GUARD CHOSE TO SAVE THE SAME PLAYER.**_")
     }
