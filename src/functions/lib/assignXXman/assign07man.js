@@ -119,7 +119,7 @@ function assign07man(userList) {
             gameInfo.playerRoles.Villager = pushing
         }
     }
-    functionList[`${final_Output}`](userList)
+    functionList[final_Output](userList)
 }
 
 module.exports = assign07man
