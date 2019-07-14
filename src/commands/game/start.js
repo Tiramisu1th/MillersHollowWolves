@@ -15,7 +15,7 @@ class start extends Command {
         const { assignNumber , assign06man , assign07man , assign08man , assign09man , assign10man , assign11man , assign12man } = require("../../functions/importFunctions")
         const { gameFramework , informRoles , trollGameFramework } = require("../../functions/importFunctions")
         if(participantsNameList.length < 6) return message.channel.send("You don't have enough players to play.")
-        if(participantsNameList.length > 12) throw new Error('How the hell did you got so many people ?')
+        if(participantsNameList.length > 12) throw new TypeError('How the hell did you got so many people ?')
         var shuffled = assignNumber(participantsNameList, message)
         if (shuffled.length === 6) await assign06man(shuffled)
         if (shuffled.length === 7) await assign07man(shuffled)
