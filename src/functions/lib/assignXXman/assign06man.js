@@ -1,11 +1,11 @@
 function assign06man(userList) {
-    var randomizeList = ["combination_A" , "combination_B", "combination_C", "combination_D", "combination_Troll"]
-    var number = Math.floor(Math.random()*randomizeList.length)
-    var final_Output = randomizeList[number]
-    if (final_Output === "combination_Troll") {
-        var randomizeList = ["combination_A" , "combination_B", "combination_C", "combination_D", "combination_Troll"]
+    var trollPercent = Math.floor(Math.random() * 100) + 1
+    if (trollPercent <= 5) {
+        final_Output = "combination_Troll"
+    } else {
+        var randomizeList = ["combination_A", "combination_B", "combination_C", "combination_D"]
         var number = Math.floor(Math.random()*randomizeList.length)
-        var final_Output = randomizeList[number]
+        var final_Output = randomizeList[number]    
     }
     var functionList = {
         combination_A: function(userList) {
