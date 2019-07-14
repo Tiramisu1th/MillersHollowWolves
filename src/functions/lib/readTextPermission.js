@@ -5,7 +5,6 @@ function readTextPermission(msg, userGroup /* Such as wolves, villagers, etc. */
         for (let index = 0; index < userGroup.length; index++) {
             const element = userGroup[index];
             if (element === null) return
-            console.log("Allow user : "+element)
             var player = client.users.find(user => user.username === element);
             var id = player.id
             channel.overwritePermissions(id, {
@@ -19,7 +18,6 @@ function readTextPermission(msg, userGroup /* Such as wolves, villagers, etc. */
         for (let index = 0; index < userGroup.length; index++) {
             const element = userGroup[index];
             if (element === null) return
-            console.log("Deny user : "+element)
             var player = client.users.find(user => user.username === element);
             var id = player.id
             channel.overwritePermissions(id, {
