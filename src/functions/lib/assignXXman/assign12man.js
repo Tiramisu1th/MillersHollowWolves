@@ -51,7 +51,7 @@ function assign12man(userList) {
         },
         combination_B: function(userList) {
             var { gameInfo } = require("../../../../index")
-            gameInfo.combination = "A"
+            gameInfo.combination = "B"
             gameInfo.playerNumber = "12"
             var pushing = []
             for (let i = 0; i < 4; i++) {
@@ -98,7 +98,7 @@ function assign12man(userList) {
         },
         combination_C: function(userList) {
             var { gameInfo } = require("../../../../index")
-            gameInfo.combination = "A"
+            gameInfo.combination = "C"
             gameInfo.playerNumber = "12"
             var pushing = []
             for (let i = 0; i < 3; i++) {
@@ -157,7 +157,7 @@ function assign12man(userList) {
         },
         combination_D: function(userList) {
             var { gameInfo } = require("../../../../index")
-            gameInfo.combination = "A"
+            gameInfo.combination = "D"
             gameInfo.playerNumber = "12"
             var pushing = []
             for (let i = 0; i < 4; i++) {
