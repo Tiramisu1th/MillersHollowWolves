@@ -1,15 +1,22 @@
-function bulkAccessTextChannel(msg, userGroups, allow = false) {
+function bulkAccessTextChannel(userGroups, allowReadChannel = false, allowSendMessage = false) {
     var { readTextPermission } = require("../importFunctions")
     var entry = userGroups;
-    if (allow === false) {
+    if (allowReadChannel === false) {
         for(var key in entry) {
             var value = entry[key];
-            readTextPermission(msg, value, false)
+            readTextPermission(value, false)
         }
-    } else if (allow === true) {
-        for(var key in entry) {
-            var value = entry[key];
-            readTextPermission(msg, value, true)
+    } else if (allowReadChannel === true) {
+        if (allowSendMessage === true) {
+            for(var key in entry) {
+                var value = entry[key];
+                readTextPermission(value, false, true)
+            }
+        } else {
+            for(var key in entry) {
+                var value = entry[key];
+                readTextPermission(value, true, true)
+            }
         }
     }
 }
