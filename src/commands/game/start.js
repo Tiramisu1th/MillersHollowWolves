@@ -26,11 +26,11 @@ class start extends Command {
         if (shuffled.length === 12) await assign12man(shuffled)
         message.channel.send("Roles have been assigned to all players.")
         informRoles(client)
-        if (gameInfo.combination === "Troll") {
-            await trollGameFramework()
-        } else {
+        // if (gameInfo.combination === "Troll") {
+        //     await trollGameFramework()
+        // } else {
             await gameFramework(client, message)
-        }
+        // }
         participantsList.length = 0
         participantsNameList.length = 0
     }
