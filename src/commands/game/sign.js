@@ -14,6 +14,7 @@ class signUp extends Command {
         var { participantsList, participantsNameList } = require("../../../index")
         var newParticipant = message.author
         if (participantsList.includes(newParticipant)) return message.reply("You have already signed up !")
+        if (participantsNameList.length > 12) return message.reply("There are too many players at the moment, please wait until next round.")
         participantsList.push(newParticipant)
         var name = newParticipant.username;
         participantsNameList.push(name)
