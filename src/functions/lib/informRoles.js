@@ -65,7 +65,7 @@ function informRoles(client) {
     for (let i = 0; i < entry.Idiot.length; i++) {
         const element = entry.Idiot[i];
         var player = client.users.find(user => user.username === element)
-        player.send("You are a __Idiot__ (Hopefully not irl). Idk what this chara's special ability yeet")
+        player.send("You are a __Idiot__ (Hopefully not irl). You will not killed by voting during daytime.")
     }
 }
 
