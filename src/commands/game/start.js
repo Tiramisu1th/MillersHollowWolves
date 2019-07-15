@@ -11,7 +11,7 @@ class start extends Command {
     }
 
     async run(message) {
-        var { client, participantsList , participantsNameList , gameInfo } = require("../../../index")
+        var { client, participantsList , participantsNameList } = require("../../../index")
         const { assignNumber , assign06man , assign07man , assign08man , assign09man , assign10man , assign11man , assign12man } = require("../../functions/importFunctions")
         const { gameFramework , informRoles , trollGameFramework } = require("../../functions/importFunctions")
         if(participantsNameList.length < 6) return message.channel.send("You don't have enough players to play.")
@@ -25,7 +25,7 @@ class start extends Command {
         if (shuffled.length === 11) await assign11man(shuffled)
         if (shuffled.length === 12) await assign12man(shuffled)
         message.channel.send("Roles have been assigned to all players.")
-        await informRoles(client)
+        informRoles(client)
         if (gameInfo.combination === "Troll") {
             await trollGameFramework()
         } else {
