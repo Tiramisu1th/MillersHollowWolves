@@ -11,11 +11,14 @@ class signUp extends Command {
     }
 
     run(message) {
-        var { participantsList } = require("../../../index")
-        var newParticipant = message.author.username
+        var { participantsList, participantsNameList } = require("../../../index")
+        var newParticipant = message.author
         if (participantsList.includes(newParticipant)) return message.reply("You have already signed up !")
+        if (participantsNameList.length > 12) return message.reply("There are too many players at the moment, please wait until next round.")
         participantsList.push(newParticipant)
-        message.channel.send("You are now in the list of the participants for the next game of The Werewolves of the Miller's Hollow.\n\nCurrent player(s) :\n" + participantsList.join("\n"))
+        var name = newParticipant.username;
+        participantsNameList.push(name)
+        message.channel.send("You are now in the list of the participants for the next game of The Werewolves of the Miller's Hollow.\n\nCurrent player(s) :\n" + participantsNameList.join("\n"))
     }
 }
 

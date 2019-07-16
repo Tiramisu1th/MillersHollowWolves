@@ -1,7 +1,24 @@
 const path = require("path")
 const { Token , client } = require("./src/core/exports")
 var participantsList = []
-
+var participantsNameList = []
+var gameInfo = {
+    playerNumber: [],
+    combination: [],
+    playerRoles: {
+        Villager: [],
+        Wolf: [],
+        WhiteWolf: [],
+        BlackWolf: [],
+        Hunter: [],
+        FortuneTeller: [],
+        Guard: [],
+        Witch: [],
+        NightWitch: [],
+        Knight: [],
+        Idiot: []
+    }
+}
 client.registry
     .registerDefaultTypes()
     .registerGroups([["game", "game"]])
@@ -18,4 +35,4 @@ client.on('error', console.error)
 
 client.login(Token)
 
-module.exports = { participantsList }
+module.exports = { client, participantsList, participantsNameList, gameInfo }
